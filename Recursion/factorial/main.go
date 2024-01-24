@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func factorial(n int) int {
-	if n == 0 {
+	if n <= 0 {
 		return 1
 	}
 
@@ -12,7 +12,7 @@ func factorial(n int) int {
 
 func main() {
 
-	number := 5
+	number := 0
 	result := factorial(number)
 
 	fmt.Printf("Factorial of %d is: %d\n", number, result)
