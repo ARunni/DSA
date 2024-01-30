@@ -9,12 +9,11 @@ type Node struct {
 
 type Queue struct {
 	head *Node
-	end *Node
-
+	end  *Node
 }
 
-func (q *Queue) enqueue(element int)  {
-	newNode := &Node{data: element,next: nil}
+func (q *Queue) enqueue(element int) {
+	newNode := &Node{data: element, next: nil}
 	if q.head == nil {
 		q.head = newNode
 	} else {
@@ -29,20 +28,20 @@ func (q *Queue) dequeue() {
 	}
 	q.head = q.head.next
 }
-func  (q *Queue) display()  {
+func (q *Queue) display() {
 	if q.head == nil {
 		fmt.Println("Nothing to print")
 		return
 	}
 	temp := q.head
 	for temp != nil {
-		fmt.Printf("%d",temp.data)
+		fmt.Printf("%d", temp.data)
 		temp = temp.next
 	}
 	fmt.Println(" ")
 }
 
-func main()  {
+func main() {
 	que := Queue{}
 	que.enqueue(1)
 	que.enqueue(2)
